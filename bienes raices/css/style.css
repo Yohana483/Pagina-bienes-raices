@@ -1,0 +1,321 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;     /*reset para rems-62.5% = 10px de 16px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;   /*16px;*/
+    line-height: 2;
+} 
+ 
+ 
+              /*GLOBALES*/
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;  /*1200px;*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3,8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+/*utilidades*/
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem ;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar_texto {
+    text-align: center;
+}
+
+.d-block {
+    display: block!important;
+}
+
+/*BOTONES*/
+
+.boton {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.boton_amarillo {
+    background-color: #e08709;
+}
+
+.boton_verde {
+    background-color: #71B100;
+}
+
+
+            /*HEADER*/
+.sitio_header , .inicio {
+    background-image: url(../img/header.jpg);   /*imagen de fondo y direccion*/
+    background-position: center center;         /*posiciona la img en el centro*/
+    background-size: cover;                     /*toma todo el esp disp en ancho y alto*/
+    height: 100vh;                              /*alto de imagen en pixeles*/
+    min-height: 60rem;  /*600px;*/
+}
+
+.contenido_header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido_header h1 {
+    color: white;
+    padding-bottom: 2rem;  /*20px;*/
+    max-width: 60rem;   /*600px;*/
+    line-height: 2;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;   /*30px;*/
+}
+
+              /*NAVEGACION*/
+.navegacion a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;   /*18px;*/
+    margin-right: 2rem;  /*20px;*/
+}
+
+.navegacion a:hover{                     /*pseudo selector*/
+    color: #71B100                     /*indica el color de la fuente que va a cambiar al posar el cursor*/
+}
+
+/*iconos nosotros*/
+
+
+.iconos_nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+
+/*ANUNCIOS*/
+
+.contenedor_anuncios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.anuncio {
+    flex-basis: calc(33.3% - 1rem);
+    border: 1px solid #858585;
+    background-color: #f5f5f5;
+}
+
+.contenido_anuncio {
+    padding: 2rem;
+}
+
+.contenido_anuncio h3 , .contenido_anuncio p{
+    margin: 0;
+}
+
+.precio {
+    color: #71B100;
+    font-weight: 700;
+}
+
+.iconos_caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos_caracteristicas li {
+    display: flex;
+}
+
+.iconos_caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver_todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/*CONTANCTO INDEX*/
+
+.imagen_contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;       /*alto de imagen ,400 pixeles*/
+    display: flex;
+    align-items: center;
+}
+
+.contendido_contacto {
+    flex: 1;
+    color: #ffffff;
+
+}
+.contendido_contacto p {
+    font-size: 1.8rem;
+}
+
+
+/* SECCION INFERIOR */
+
+.seccion_inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion_inferior , .blog {
+    flex-basis: 60%;
+}
+
+.seccion_inferior , .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada_blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+/*
+.entrada_blog:last-of-type {
+    margin-bottom: 0;
+}
+*/
+
+.entrada_blog , .imagen {
+    flex-basis: 40%;
+}
+
+.entrada_blog , .texto_entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto_entrada a {
+    color: black;
+    text-decoration: none;
+}
+
+.texto_entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto_entrada h4::after {       /*pseudo elemento, quiere indicar q le cree un elemento despues del H4*/
+    content: '';            /*se indica el contenido a mostrar, texto va entre ''*/
+    display: block;         /*pseudoelementos*/
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.texto_entrada span {
+    color: #e08709;
+}
+
+
+/*TESTIMONIALES*/
+
+.testimonial {
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+
+/*OOTER*/
+
+.site_footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.contenedor_footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 0;
+    color: white;
+}
